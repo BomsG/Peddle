@@ -33,7 +33,11 @@ const Navbar = () => {
         </button>
       </div>
       <div onClick={handleNav} className="block md:hidden">
-        {!nav ? <AiOutlineMenu /> : <AiOutlineClose color="black" size={30} />}
+        {!nav ? (
+          <AiOutlineMenu size={20} />
+        ) : (
+          <AiOutlineClose color="black" size={20} />
+        )}
       </div>
       <div
         className={
