@@ -9,22 +9,15 @@ const Navbar = () => {
     setNav(!nav);
   };
 
+  const item = ["About", "FAQ", "Pricing", "Testimonials"];
+
   return (
     <div className="flex justify-between items-center my-5 px-10 md:px-20">
       <img src={logo} />
       <ul className="hidden md:flex">
-        <li className="mx-5 text-sm text-[#4F5665] font-serif">
-          <a href="">About</a>
-        </li>
-        <li className="mx-5 text-sm text-[#4F5665] font-serif">
-          <a href="">FAQ</a>
-        </li>
-        <li className="mx-5 text-sm text-[#4F5665] font-serif">
-          <a href="">Pricing</a>
-        </li>
-        <li className="mx-5 text-sm text-[#4F5665] font-serif">
-          <a href="">Testimonials</a>
-        </li>
+        {item.map((item) => (
+          <li className="mx-5 text-sm text-[#4F5665] font-serif">{item}</li>
+        ))}
       </ul>
       <div className="hidden md:flex">
         <button className="mx-5 font-bold">Sign in</button>
@@ -48,18 +41,11 @@ const Navbar = () => {
       >
         <img src={logo} className="my-10" />
         <ul className="pt-20">
-          <li className="mx-5 text-xl text-[#4F5665] font-serif pb-5">
-            <a href="">About</a>
-          </li>
-          <li className="mx-5 text-xl text-[#4F5665] font-serif pb-5">
-            <a href="">FAQ</a>
-          </li>
-          <li className="mx-5 text-xl text-[#4F5665] font-serif pb-5">
-            <a href="">Pricing</a>
-          </li>
-          <li className="mx-5 text-xl text-[#4F5665] font-serif pb-5">
-            <a href="">Testimonials</a>
-          </li>
+          {item.map((item) => (
+            <li className="mx-5 text-xl text-[#4F5665] font-serif pb-5">
+              {item}
+            </li>
+          ))}
         </ul>
         <button className="mx-5 font-bold text-white mt-20">Sign in</button>
         <button className="mt-20 border border-2 border-[#BA55D3] px-5 py-1 rounded-l text-sm text-white">

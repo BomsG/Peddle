@@ -4,6 +4,31 @@ import { AiOutlineCheck } from "react-icons/ai";
 import standard from "../images/standard.png";
 import premium from "../images/premium.png";
 
+const Card = (props) => {
+  return (
+    <>
+      <img src={props.image} className="w-[180px]" />
+      <h2 className="font-bold mb-4">{props.name}</h2>
+      <div className="flex items-center mb-3">
+        <AiOutlineCheck color="#2FAB73" />
+        <h3 className="text-sm ml-3">Mauris sem neque</h3>
+      </div>
+      <div className="flex items-center mb-3">
+        <AiOutlineCheck color="#2FAB73" />
+        <h3 className="text-sm ml-3">Mauris sem neque</h3>
+      </div>
+      <div className="flex items-center mb-10 md:mb-40">
+        <AiOutlineCheck color="#2FAB73" />
+        <h3 className="text-sm ml-3">Mauris sem neque</h3>
+      </div>
+      <h2 className="font-bold">{props.detail}</h2>
+      <button className="border border-2 border-[#BA55D3] px-10 py-1 rounded-l text-sm">
+        Select
+      </button>
+    </>
+  );
+};
+
 const Plans = () => {
   return (
     <div className="flex justify-center my-20">
@@ -19,83 +44,23 @@ const Plans = () => {
         </div>
         <div className="block md:flex items-center my-10">
           <div className="flex justify-center">
-            <div className="h-[500px] md:h-[650px] shadow-lg border border-[#DDDDDD] shadow-black-500/60 py-10 px-5  mr-0 md:mr-10 mb-10 hover:scale-105 ease-in-out duration-500">
-              <img src={free} className="w-[180px]" />
-              <h2 className="font-bold mb-4">Free Plan</h2>
-              <div className="flex items-center mb-3">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <div className="flex items-center mb-3">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <div className="flex items-center mb-10 md:mb-40">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <h2 className="font-bold">Free</h2>
-              <button className="border border-2 border-[#BA55D3] px-10 py-1 rounded-l text-sm">
-                Select
-              </button>
+            <div className=" shadow-lg border border-[#DDDDDD] shadow-black-500/60 py-10 px-5  mr-0 md:mr-10 mb-10 hover:scale-105 ease-in-out duration-500">
+              <Card image={free} name={"Free Plan"} detail={"Free"} />
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <div className=" shadow-lg border border-[#DDDDDD] shadow-black-500/60 py-10 px-5 mr-0 md:mr-10 mb-10 hover:scale-105 ease-in-out duration-500">
+              <Card image={premium} name={"Premium Plan"} detail={"9$ /mo"} />
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="h-[500px] md:h-[650px] shadow-lg border border-[#DDDDDD] shadow-black-500/60 py-10 px-5 mr-0 md:mr-10 mb-10 hover:scale-105 ease-in-out duration-500">
-              <img src={premium} className="w-[180px]" mr-7 />
-              <h2 className="font-bold mb-4">Premium Plan</h2>
-              <div className="flex items-center mb-3">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <div className="flex items-center mb-3 ">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <div className="flex items-center mb-3">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <div className="flex items-center mb-10 md:mb-40">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <h2 className="">
-                <span className="font-bold">$9</span> / mo
-              </h2>
-              <button className="border border-2 border-[#BA55D3] px-10 py-1 rounded-l text-sm">
-                Select
-              </button>
-            </div>
-          </div>
-          <div className="flex justify-center">
-            <div className="h-[500px] md:h-[650px] shadow-lg border border-[#DDDDDD] shadow-black-500/60 py-10 px-5 mb-10 hover:scale-105 ease-in-out duration-500">
-              <img src={standard} className="w-[180px]" mr-7 />
-              <h2 className="font-bold mb-4">Free Plan</h2>
-              <div className="flex items-center mb-3">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <div className="flex items-center mb-3">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <div className="flex items-center mb-3">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <div className="flex items-center mb-3">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <div className="flex items-center mb-10 md:mb-40">
-                <AiOutlineCheck color="#2FAB73" />
-                <h3 className="text-sm ml-3">Mauris sem neque</h3>
-              </div>
-              <h2 className="font-bold">Free</h2>
-              <button className=" text-white font-bold bg-[#BA55D3] px-10 py-1 rounded-l text-sm">
-                Select
-              </button>
+            <div className=" shadow-lg border border-[#DDDDDD] shadow-black-500/60 py-10 px-5 mb-10 hover:scale-105 ease-in-out duration-500">
+              <Card
+                image={standard}
+                name={"Standard Plan"}
+                detail={"Standard"}
+              />
             </div>
           </div>
         </div>
